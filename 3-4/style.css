@@ -1,0 +1,49 @@
+.top {
+    width: 1000px;
+    display: flex;
+}
+
+.yi-pic {
+    width: 200px;
+    height: 120px;
+    background-color: #add8e6;
+}
+
+.message {
+    margin: 0;
+    line-height: 60px;
+}
+.welcome-message {
+    width: 800px;
+    height: 60px;
+    background-color: #87ceeb;
+    margin: 0;
+    display: inline-block;
+    text-align: right;
+}
+
+.login-message {
+    width: 800px;
+    height: 60px;
+    background-color: #00ffff;
+    margin: 0;
+    display: inline-block;
+    text-align: right;
+}
+
+table {
+    margin: 10px auto;   
+}
+th {
+    background-color: #87ceeb;
+}
+
+td {
+    background-color: #e0ffff;
+}
+
+.footer {
+    width:1000px;
+    height: 50px;
+    background-color: #00ced1;
+}
