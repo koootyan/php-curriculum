@@ -3,20 +3,8 @@
 
     $users_data = new getData();
     $display_users_data = $users_data->getUserData();
-
-    $post_data = new getData();
-    $fetch_posts_data = $post_data->getPostData();
+    $fetch_posts_data = $users_data->getPostData();
     $display_posts_data = $fetch_posts_data->fetchAll(PDO::FETCH_ASSOC);
-    for ($i=0; $i<5; $i++) {
-        if ($display_posts_data[$i]["category_no"] === "1") {
-            $display_posts_data[$i]["category_no"] = "食事";
-        } else if ($display_posts_data[$i]["category_no"] === "2") {
-            $display_posts_data[$i]["category_no"] = "旅行";
-        } else {
-            $display_posts_data[$i]["category_no"] = "その他";
-        }
-    }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +34,18 @@
         </tr>
         <?php foreach ($display_posts_data as $values) { ?>
             <tr>
-                <?php foreach ($values as $value) { ?>
-                    <td><?php echo $value; ?></td>
+                <?php foreach ($values as $key => $value) { ?>
+                    <td>
+                        <?php if ($key === "category_no" && $value === "1") { ?>
+                            <?php echo "食事"; ?>
+                        <?php } else if ($key === "category_no" && $value === "2") { ?>
+                            <?php echo "旅行"; ?>
+                        <?php } else if ($key === "category_no" && $value === "3") { ?>
+                            <?php echo "その他"; ?>
+                        <?php } else { ?>
+                            <?php echo $value; ?>
+                        <?php } ?>
+                    </td>
                 <?php } ?>
             </tr>
         <?php } ?>
