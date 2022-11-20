@@ -36,15 +36,15 @@
             <tr>
                 <?php foreach ($values as $key => $value) { ?>
                     <td>
-                        <?php if ($key === "category_no" && $value === "1") { ?>
-                            <?php echo "食事"; ?>
-                        <?php } else if ($key === "category_no" && $value === "2") { ?>
-                            <?php echo "旅行"; ?>
-                        <?php } else if ($key === "category_no" && $value === "3") { ?>
-                            <?php echo "その他"; ?>
-                        <?php } else { ?>
-                            <?php echo $value; ?>
-                        <?php } ?>
+                        <?php if ($key === "category_no" && $value === "1") {
+                            echo "食事";
+                        } else if ($key === "category_no" && $value === "2") {
+                            echo "旅行";
+                        } else if ($key === "category_no" && $value === "3") {
+                            echo "その他";
+                        } else {
+                            echo $value;
+                        } ?>
                     </td>
                 <?php } ?>
             </tr>
